@@ -1,6 +1,7 @@
-# Module: News Feed
-The `newsfeed ` module is one of the default modules of the MagicMirror.
-This module displays news headlines based on an RSS feed.
+# Module: News Feed Touch
+
+This 'MMM-newsfeedtouch' module is based on the default `newsfeed ` module from MagicMirror2.
+This module displays news headlines based on an RSS feed and when the headline is clicked displays the description of the headline.
 
 ## Using the module
 
@@ -8,11 +9,11 @@ To use this module, add it to the modules array in the `config/config.js` file:
 ````javascript
 modules: [
 	{
-		module: 'newsfeed',
+		module: 'MMM-newsfeedtouch',
 		position: 'bottom_bar',	// This can be any of the regions. Best results in center regions.
 		config: {
 			// The config property is optional.
-			// If no config is set, an example calendar is shown.
+			// If no config is set, an example feed is shown.
 			// See 'Configuration options' for more information.
 
 			feeds: [
@@ -72,14 +73,6 @@ The following properties can be configured:
 				<br><b>Default value:</b> <code>true</code>
 			</td>
 		</tr>
-		<tr>
-			<td><code>showDescription</code></td>
-			<td>Display the description of an item.<br>
-				<br><b>Possible values:</b> <code>true</code> or <code>false</code>
-				<br><b>Default value:</b> <code>false</code>
-			</td>
-		</tr>
-
 		<tr>
 			<td><code>reloadInterval</code></td>
 			<td>How often does the content needs to be fetched? (Milliseconds)<br>
