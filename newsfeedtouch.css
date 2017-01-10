@@ -1,0 +1,21 @@
+
+
+
+.infoCenter {
+  position: fixed;
+  top: -800px;
+  width: 100%;
+  z-index: 3;
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  background-color: black;
+  padding: 15px;
+  font-size: 40px;
+  line-height: 130%;
+  box-shadow: 0px 0px 20px 1px #eee;
+  cursor: pointer;
+}
+.fed {
+  cursor: pointer;
+}
