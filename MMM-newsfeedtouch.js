@@ -24,6 +24,7 @@ Module.register("MMM-newsfeedtouch",{
 		showDescription: false,  // Don't change!
 		reloadInterval:  5 * 60 * 1000, // every 5 minutes
 		updateInterval: 10 * 1000,
+		readInterval: 15 * 1000,
 		animationSpeed: 2.5 * 1000,
 		maxNewsItems: 15, // 0 for unlimited
 		removeStartTags: '',
@@ -159,25 +160,23 @@ Module.register("MMM-newsfeedtouch",{
 
 			//below is the function to show description and hide title
 			function showdesc(thisdesc) {
-
 				thisdesc.intpause();	//clear interval
-
 				title.style.display="none";
+				var readTimer = setTimeout(function() {hidedesc(thisdesc)}, thisdesc.config.readInterval); //sets timeout for the description
 				description = document.createElement("div");
 				description.className = "infoCenter";
 				description.innerHTML = thisdesc.newsItems[thisdesc.activeItem].description;
 				description.addEventListener("click", () => hidedesc(thisdesc));  //Hide description on click
+				description.addEventListener("click", () => clearTimeout(readTimer)); //Stop timer when clicked so the next title doesn't reload again.
 				wrapper.appendChild(description);
 
 			};
 
-			//and to close the description and get next title
+			//and to close the description on click and get next title
 			function hidedesc(thisdesc) {
 				thisdesc.activeItem++;
 				thisdesc.intresume();	//resume the interval
 				description.style.display="none";
-				//title.style.display="block"; // for debugging purposes
-
 			};
 
 //codechange end
