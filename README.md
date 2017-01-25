@@ -87,6 +87,13 @@ The following properties can be configured:
 				<br><b>Default value:</b> <code>10000</code> (10 seconds)
 			</td>
 		</tr>
+				<tr>
+			<td><code>readInterval</code></td>
+			<td>For how long should the description be shown before it closes and loads next headline? (Milliseconds)<br>
+				<br><b>Possible values:</b><code>1000</code> - <code>60000</code>
+				<br><b>Default value:</b> <code>15000</code> (15 seconds)
+			</td>
+		</tr>
 		<tr>
 			<td><code>animationSpeed</code></td>
 			<td>Speed of the update animation. (Milliseconds)<br>
