@@ -5,6 +5,7 @@
  *
  * Original Module By Michael Teeuw http://michaelteeuw.nl
  * Modified for touchscreen use By Pierre Broberg
+ * With help from fewieden
  * MIT Licensed.
  */
 
