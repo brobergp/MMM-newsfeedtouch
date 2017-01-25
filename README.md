@@ -3,6 +3,8 @@
 This 'MMM-newsfeedtouch' module is based on the default `newsfeed ` module from MagicMirror2.
 This module displays news headlines based on an RSS feed and when the headline is clicked displays the description of the headline.
 
+Big Thanks to fewieden (https://github.com/fewieden) for the help with this!
+
 ## Using the module
 
 To use this module, add it to the modules array in the `config/config.js` file:
