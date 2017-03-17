@@ -3,7 +3,7 @@
 
 .infoCenter {
   position: fixed;
-  top: -800px;
+  bottom: 500px;
   width: 100%;
   z-index: 3;
   text-align: center;
